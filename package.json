@@ -1,6 +1,8 @@
 {
 	"name": "svelte-use",
 	"version": "0.0.1",
+	"description": "Collection of useful svelte stores and utilities",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -10,16 +12,12 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run"
+		"test": "npm run test:unit -- --run",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write ."
 	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
-	],
-	"sideEffects": [
-		"**/*.css"
-	],
+	"files": ["dist", "!dist/**/*.test.*", "!dist/**/*.spec.*"],
+	"sideEffects": ["**/*.css"],
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
@@ -33,6 +31,7 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/package": "^2.0.0",
