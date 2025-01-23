@@ -1,7 +1,5 @@
-
-
 export type MouseCoordinates = {
-    x: number;
-    y: number;
-    sourceType?: "mouse" | "touch";
-}
+	x: number;
+	y: number;
+	sourceType?: "mouse" | "touch";
+};
