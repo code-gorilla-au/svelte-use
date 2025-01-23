@@ -24,11 +24,11 @@ export function useMouse(): MouseCoordinates {
 	}
 
 	onMount(() => {
-		window.addEventListener("mousemove", handleMouseMove);
+		document.addEventListener("mousemove", handleMouseMove);
 	});
 
 	onDestroy(() => {
-		window.removeEventListener("mousemove", handleMouseMove);
+		document.removeEventListener("mousemove", handleMouseMove);
 	});
 
 	return {

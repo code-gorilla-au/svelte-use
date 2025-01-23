@@ -6,6 +6,6 @@ describe("useMouse", () => {
 		const { x, y, sourceType } = new UseMouse();
 		expect(x).toBe(0);
 		expect(y).toBe(0);
-		expect(sourceType).toBe("undefined");
+		expect(sourceType).toBe(undefined);
 	});
 });
